@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Members Home - AYR ROTARY</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.members-page {
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 3em 2em 4em 2em;
+				box-sizing: border-box;
+			}
+
+			.members-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2em;
+			}
+
+			.member-card {
+				background: #f7f7f7;
+				border: 1px solid #dcdcdc;
+				border-radius: 8px;
+				padding: 1.5em;
+				box-sizing: border-box;
+			}
+
+			.member-card h3 {
+				margin-top: 0;
+			}
+
+			.member-actions {
+				margin-top: 2em;
+			}
+
+			.member-actions a {
+				margin-right: 1em;
+			}
+
+			@media screen and (max-width: 980px) {
+				.members-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				.members-page {
+					padding: 2em 1em 3em 1em;
+				}
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="main">
+
+				<header id="header">
+					<div class="ayr-topbar">
+						<a href="index.html" class="ayr-brand-image">
+							<img src="images/ayr-logo-strip.jpg" alt="Rotary Club of Ayr" />
+						</a>
+
+						<nav class="ayr-nav">
+							<a href="index.html">Home</a>
+							<a href="members-home.html" class="active">Members</a>
+						</nav>
+					</div>
+				</header>
+
+				<div class="inner">
+					<section class="members-page">
+						<h2>Members Area</h2>
+						<p id="member-welcome">Checking login...</p>
+
+						<div class="members-grid">
+							<div class="member-card">
+								<h3>Council Minutes</h3>
+								<p>Read the latest council minutes.</p>
+								<a href="council-minutes.html" class="button small">Open</a>
+							</div>
+
+							<div class="member-card">
+								<h3>Duty Rosters</h3>
+								<p>Check duties and upcoming responsibilities.</p>
+								<a href="duty-rosters.html" class="button small">Open</a>
+							</div>
+
+							<div class="member-card">
+								<h3>Members Phone List</h3>
+								<p>Access the members contact list.</p>
+								<a href="members-phone-list.html" class="button small">Open</a>
+							</div>
+						</div>
+
+						<div class="member-actions">
+							<a href="index.html" class="button small">Public Site</a>
+							<a href="#" id="logout-link" class="button small">Log Out</a>
+						</div>
+					</section>
+				</div>
+
+			</div>
+		</div>
+
+		<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<script>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.init();
+
+				var user = window.netlifyIdentity.currentUser();
+				if (!user) {
+					document.location.href = "/members-login.html";
+				} else {
+					var welcome = document.getElementById("member-welcome");
+					welcome.textContent = "Welcome, " + (user.user_metadata && user.user_metadata.full_name ? user.user_metadata.full_name : user.email) + ".";
+				}
+
+				document.getElementById("logout-link").addEventListener("click", function (e) {
+					e.preventDefault();
+					window.netlifyIdentity.logout();
+				});
+
+				window.netlifyIdentity.on("logout", function () {
+					document.location.href = "/members-login.html";
+				});
+			}
+		</script>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

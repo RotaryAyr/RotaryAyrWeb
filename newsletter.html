@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Newsletter - AYR ROTARY</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        .newsletter-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3em 2em 4em 2em;
+            box-sizing: border-box;
+        }
+
+        .newsletter-page h2 {
+            margin-bottom: 0.4em;
+        }
+
+        .newsletter-page h3 {
+            margin-bottom: 0.8em;
+        }
+
+        .newsletter-page p {
+            margin-bottom: 1.2em;
+            max-width: 760px;
+        }
+
+        .newsletter-form-wrap {
+            max-width: 360px;
+            margin: 2.5em auto 0 auto;
+            background: #1f4e9b;
+            padding: 1.5em;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .newsletter-form-wrap h3,
+        .newsletter-form-wrap p,
+        .newsletter-form-wrap label {
+            color: #ffffff;
+        }
+
+        .newsletter-form-wrap h3 {
+            margin-bottom: 0.35em;
+            font-size: 2em;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+        }
+
+        .newsletter-smalltext {
+            font-size: 0.95em;
+            margin-bottom: 1.5em;
+        }
+
+        .newsletter-form-wrap .field {
+            margin-bottom: 1.25em;
+        }
+
+        .newsletter-form-wrap input[type="text"],
+        .newsletter-form-wrap input[type="email"] {
+            background: #ffffff;
+            border: none;
+            border-radius: 3px;
+            height: 2.8em;
+        }
+
+        .newsletter-privacy {
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin: 1.2em 0 1.5em 0;
+            color: #ffffff;
+        }
+
+        .newsletter-privacy a {
+            color: #ffffff !important;
+        }
+
+        .newsletter-captcha-placeholder {
+            background: #ffffff;
+            border-radius: 3px;
+            padding: 1em;
+            font-size: 0.9em;
+            color: #3d4449;
+            margin-bottom: 1.5em;
+        }
+
+        .newsletter-submit {
+            display: block;
+            width: 100%;
+            background: #f0b323 !important;
+            box-shadow: none !important;
+            color: #ffffff !important;
+            height: 3em;
+            line-height: 3em;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .newsletter-actions {
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width: 736px) {
+            .newsletter-page {
+                padding: 2em 1em 3em 1em;
+            }
+
+            .newsletter-form-wrap {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+
+            <header id="header">
+                <div class="ayr-topbar">
+                    <a href="index.html" class="ayr-brand-image">
+                        <img src="images/ayr-logo-strip.jpg" alt="Rotary Club of Ayr" />
+                    </a>
+
+                    <nav class="ayr-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="GetInvolved.html">Get Involved</a>
+                        <a href="meetings.html">Meetings</a>
+                        <a href="news.html" class="active">News</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="inner">
+                <section class="newsletter-page">
+
+                    <h2>Newsletter</h2>
+                    <h3>Read the Latest Newsletter</h3>
+
+                    <p>
+                        Here is a link to our
+                        <a href="Newsletter.pdf">latest newsletter</a>
+                    </p>
+
+                    <p>
+                        You can sign up below to get the next one straight to your inbox
+                    </p>
+
+                    <div class="newsletter-form-wrap">
+                        <h3>Newsletter</h3>
+                        <p class="newsletter-smalltext">
+                            Sign up for latest on Ayr Rotary projects and initiatives
+                        </p>
+
+                        <form name="newsletter-signup" method="POST" action="/thanks.html" data-netlify="true"
+                            data-netlify-recaptcha="true">
+                            <input type="hidden" name="form-name" value="newsletter-signup" />
+
+                            <div class="field">
+                                <input type="email" name="email" id="email" placeholder="Email" required />
+                            </div>
+
+                            <div class="field">
+                                <input type="text" name="first-name" id="first-name" placeholder="First name" />
+                            </div>
+
+                            <div class="field">
+                                <input type="text" name="last-name" id="last-name" placeholder="Last name" />
+                            </div>
+
+                            <p class="newsletter-privacy">
+                                You can unsubscribe anytime. For more details, review the
+                                <a href="privacy.html">Privacy Notice</a> on our website.
+                            </p>
+
+                            <div data-netlify-recaptcha="true"></div>
+
+                            <input type="submit" value="Subscribe" class="newsletter-submit" />
+                        </form>
+                    </div>
+
+                    <div class="newsletter-actions">
+                        <a href="about.html" class="button small">Back to About Us</a>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="article-footer-panel">
+                <div class="article-bottom-grid">
+                    <div>
+                        <h3>Rotary in Ayr</h3>
+                        <img src="images/FacebookLink.jpg" alt="Rotary in Ayr Facebook link" class="facebook-link" />
+                    </div>
+
+                    <div>
+                        <h3>Contact</h3>
+                        <p>
+                            Secretary Bob Cherry<br />
+                            07831 407101<br />
+                            <a href="mailto:bob.a.cherry@btinternet.com">bob.a.cherry@btinternet.com</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Privacy Notice</h3>
+                        <p>
+                            <a href="privacy.html">Read our Privacy Notice</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

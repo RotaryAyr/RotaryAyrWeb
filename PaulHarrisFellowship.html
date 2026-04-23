@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Paul Harris Fellowship (PHF) - AYR ROTARY</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style>
+        .phf-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3em 2em 4em 2em;
+            box-sizing: border-box;
+        }
+
+        .phf-page h2 {
+            margin-bottom: 1em;
+        }
+
+        .phf-page p {
+            margin-bottom: 1.4em;
+        }
+
+        .phf-table-wrap {
+            margin-top: 2em;
+            overflow-x: auto;
+        }
+
+        .phf-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1em;
+            margin-bottom: 1em;
+            flex-wrap: wrap;
+        }
+
+        .phf-entries,
+        .phf-search {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .phf-entries label,
+        .phf-search label {
+            margin: 0;
+            font-weight: 600;
+            color: #3d4449;
+        }
+
+        .phf-entries select {
+            width: 80px;
+            min-width: 80px;
+        }
+
+        .phf-search input {
+            width: 160px;
+            max-width: 100%;
+        }
+
+        .phf-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+
+        .phf-table th,
+        .phf-table td {
+            padding: 0.9em 0.75em;
+            border: 1px solid rgba(210, 215, 217, 0.75);
+            text-align: left;
+        }
+
+        .phf-table th {
+            color: #3d4449;
+            font-weight: 700;
+            background: rgba(230, 235, 237, 0.25);
+        }
+
+        .phf-table tbody tr:nth-child(2n + 1) {
+            background-color: rgba(230, 235, 237, 0.18);
+        }
+
+        .phf-footer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1em;
+            gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        .phf-paging {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+
+        .phf-page-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.2em;
+            height: 2.2em;
+            border: 1px solid rgba(210, 215, 217, 0.95);
+            border-radius: 4px;
+            text-decoration: none;
+            color: #3d4449;
+            background: #fff;
+            border-bottom: none;
+        }
+
+        .phf-page-button.current {
+            font-weight: 700;
+        }
+
+        .phf-actions {
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width: 736px) {
+            .phf-page {
+                padding: 2em 1em 3em 1em;
+            }
+
+            .phf-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .phf-search input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="main">
+
+            <header id="header">
+                <div class="ayr-topbar">
+                    <a href="index.html" class="ayr-brand-image">
+                        <img src="images/ayr-logo-strip.jpg" alt="Rotary Club of Ayr" />
+                    </a>
+
+                    <nav class="ayr-nav">
+                        <a href="index.html">Home</a>
+                        <a href="about.html" class="active">About Us</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="GetInvolved.html">Get Involved</a>
+                        <a href="meetings.html">Meetings</a>
+                        <a href="news.html">News</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="inner">
+                <section class="phf-page">
+
+                    <h2>Paul Harris Fellowship (PHF)</h2>
+
+                    <p>
+                        All Rotary clubs can nominate members and non-members to be awarded a PHF.
+                        Originally it was based on donations made to The Rotary Foundation, which is
+                        Rotary's main charity, but in the United Kingdom, PHF awards are made to people
+                        who have made an outstanding contribution to the local community or their club.
+                    </p>
+
+                    <p>
+                        The Paul Harris Fellow recognition was established in 1957 to show appreciation,
+                        to encourage, and recognise, substantial contributions to The Rotary Foundation.
+                        The recognition is named after Chicago attorney, Paul Harris (1868-1947) who
+                        founded Rotary in 1905.
+                    </p>
+
+                    <p>
+                        Ayr Rotary has made these awards over the years. The award stays with you, even
+                        if you move to another club. The current members who hold a PHF award are:
+                    </p>
+
+                    <div class="phf-table-wrap">
+
+                        <div class="phf-controls">
+                            <div class="phf-entries">
+                                <select>
+                                    <option selected>100</option>
+                                    <option>50</option>
+                                    <option>25</option>
+                                    <option>10</option>
+                                </select>
+                                <label>entries per page</label>
+                            </div>
+
+                            <div class="phf-search">
+                                <label>Search:</label>
+                                <input type="text" />
+                            </div>
+                        </div>
+
+                        <table class="phf-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Date Awarded</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Geoff Barber</td>
+                                    <td>26/06/2012</td>
+                                </tr>
+                                <tr>
+                                    <td>Neil Beattie</td>
+                                    <td>17/01/1997</td>
+                                </tr>
+                                <tr>
+                                    <td>Jimmy Begg</td>
+                                    <td>16/01/2012</td>
+                                </tr>
+                                <tr>
+                                    <td>Kenneth Dickie</td>
+                                    <td>16/01/2012</td>
+                                </tr>
+                                <tr>
+                                    <td>John Ewing</td>
+                                    <td>01/03/2011</td>
+                                </tr>
+                                <tr>
+                                    <td>Euan Frew</td>
+                                    <td>16/07/2013</td>
+                                </tr>
+                                <tr>
+                                    <td>Gus Iannotti</td>
+                                    <td>01/12/2015</td>
+                                </tr>
+                                <tr>
+                                    <td>John Laughland</td>
+                                    <td>25/04/1989</td>
+                                </tr>
+                                <tr>
+                                    <td>Hazel McCully</td>
+                                    <td>14/06/2013</td>
+                                </tr>
+                                <tr>
+                                    <td>Jim Nelson</td>
+                                    <td>02/05/2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary-Helen Shakespeare</td>
+                                    <td>03/05/2011</td>
+                                </tr>
+                                <tr>
+                                    <td>Charlie Steele</td>
+                                    <td>12/12/2017</td>
+                                </tr>
+                                <tr>
+                                    <td>Alex Thomson</td>
+                                    <td>09/12/2014</td>
+                                </tr>
+                                <tr>
+                                    <td>Coln Vooght</td>
+                                    <td>11/06/2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Mike Williams</td>
+                                    <td>02/05/2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Paul Williams</td>
+                                    <td>02/05/2023</td>
+                                </tr>
+                                <tr>
+                                    <td>Ron Ireland</td>
+                                    <td>20/05/2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Ronnie Wilson</td>
+                                    <td>20/05/2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="phf-footer-row">
+                            <div>Showing 1 to 18 of 18 entries</div>
+
+                            <div class="phf-paging">
+                                <span>&lsaquo;</span>
+                                <a href="#" class="phf-page-button current">1</a>
+                                <span>&rsaquo;</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="phf-actions">
+                        <a href="about.html" class="button small">Back to About Us</a>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="article-footer-panel">
+                <div class="article-bottom-grid">
+                    <div>
+                        <h3>Rotary in Ayr</h3>
+                        <img src="images/FacebookLink.jpg" alt="Rotary in Ayr Facebook link" class="facebook-link" />
+                    </div>
+
+                    <div>
+                        <h3>Contact</h3>
+                        <p>
+                            Secretary Bob Cherry<br />
+                            07831 407101<br />
+                            <a href="mailto:bob.a.cherry@btinternet.com">bob.a.cherry@btinternet.com</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3>Privacy Notice</h3>
+                        <p>
+                            <a href="privacy.html">Read our Privacy Notice</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
