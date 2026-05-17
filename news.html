@@ -124,8 +124,54 @@
 		}
 
 		@media screen and (max-width: 736px) {
+
+			/*
+				iPhone-friendly spacing.
+				This keeps a small readable margin on both sides.
+			*/
+
+			.inner {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
 			.news-page {
-				padding: 2em 1em 3em 1em;
+				padding: 2em 1.25em 3em 1.25em;
+			}
+
+			.news-layout {
+				gap: 2em;
+			}
+
+			.news-post {
+				margin-bottom: 2em;
+			}
+
+			.news-post h3 {
+				font-size: 1.2em;
+				line-height: 1.35;
+			}
+
+			.news-post p {
+				line-height: 1.55;
+			}
+
+			.news-sidebar-box {
+				margin-bottom: 2em;
+			}
+
+			.news-search-input,
+			.news-archive-select {
+				max-width: 100%;
+			}
+
+			.news-footer-panel {
+				margin-top: 2.5em;
+				padding-top: 1.5em;
+			}
+
+			.news-bottom-grid {
+				gap: 2em;
 			}
 		}
 	</style>
@@ -157,18 +203,16 @@
 			<div class="inner">
 				<section class="news-page">
 
-
-
 					<div class="news-layout">
 
 						<div class="news-main">
 							<h2>News</h2>
+
 							<div id="news-archive">
 
 								<article class="news-post" data-month="2026-04" data-category="curling"
 									data-search="april 2026 david hope rotary worlds curling stranraer north west castle ice rink hotel foreign competitors friendship">
-									<h3><a href="DavidHopeCurling.html">Skip David Hope's review of the Rotary Worlds
-											Curling</a></h3>
+									<h3><a href="DavidHopeCurling.html">Skip David Hope's review of the Rotary Worlds Curling</a></h3>
 									<p class="news-date">Posted April 15, 2026</p>
 									<p>
 										Well, what I can say about the Rotary Worlds at Stranraer. Our
@@ -198,8 +242,7 @@
 
 								<article class="news-post" data-month="2026-04" data-category="community"
 									data-search="april 2026 poppy appeal results 2025 ayr ayrshire poppy scotland donations generosity fundraising">
-									<h3><a href="PoppyAppealResults2025.html">Incredible 2025 Poppy Appeal Results</a>
-									</h3>
+									<h3><a href="PoppyAppealResults2025.html">Incredible 2025 Poppy Appeal Results</a></h3>
 									<p class="news-date">Posted April 4, 2026</p>
 									<p>
 										Wow! Such generosity from the people of Ayrshire. The 2025
@@ -226,8 +269,7 @@
 
 								<article class="news-post" data-month="2026-03" data-category="community"
 									data-search="march 2026 police scotland stewarton equine centre govan traffic mounted police east ayrshire equine animals stables">
-									<h3><a href="PoliceVisit.html">Police Scotland visit to Stewarton Equine Centre and
-											Govan Traffic</a></h3>
+									<h3><a href="PoliceVisit.html">Police Scotland visit to Stewarton Equine Centre and Govan Traffic</a></h3>
 									<p class="news-date">Posted March 23, 2026</p>
 									<p>
 										Scotland's mounted police work out of Stewarton in East
@@ -270,8 +312,7 @@
 
 								<article class="news-post" data-month="2026-03" data-category="guest-speakers"
 									data-search="march 2026 fraser maitland inspiring young entrepreneurs glasgow school of art enterprise manager university of the west of scotland business">
-									<h3><a href="FraserMaitlandEntrepreneurs.html">Fraser Maitland, "Inspiring Young
-											Entrepreneurs"</a></h3>
+									<h3><a href="FraserMaitlandEntrepreneurs.html">Fraser Maitland, "Inspiring Young Entrepreneurs"</a></h3>
 									<p class="news-date">Posted March 5, 2026</p>
 									<p>
 										The Rotary Club of Ayr very much welcomed and thoroughly
@@ -286,8 +327,7 @@
 
 								<article class="news-post" data-month="2026-02" data-category="environment"
 									data-search="february 2026 waste management alasdair meldrum albion environmental recycling environment health safety batteries waste crime construction industries">
-									<h3><a href="WasteManagementMeldrum.html">Waste Management by Alasdair Meldrum</a>
-									</h3>
+									<h3><a href="WasteManagementMeldrum.html">Waste Management by Alasdair Meldrum</a></h3>
 									<p class="news-date">Posted February 23, 2026</p>
 									<p>
 										Albion Environmental Limited was established in 2002 and has
@@ -302,8 +342,7 @@
 
 								<article class="news-post" data-month="2026-02" data-category="curling"
 									data-search="annual rotary bonspiel perth curling dewar charity event">
-									<h3><a href="AnnualRotaryBonspielPerth.html">Annual Rotary Bonspiel in Perth</a>
-									</h3>
+									<h3><a href="AnnualRotaryBonspielPerth.html">Annual Rotary Bonspiel in Perth</a></h3>
 									<p class="news-date">Posted February 20, 2026</p>
 									<p>
 										Many thanks to everyone who participated in the 2026 event of
@@ -317,22 +356,19 @@
 
 								<article class="news-post" data-month="2026-02" data-category="guest-speakers"
 									data-search="february 2026 brenda waugh district governor annan rotary mumbai india">
-									<h3><a href="DistrictGovernorBrendaWaugh.html">District Governor Brenda Waugh visits
-											Ayr</a></h3>
+									<h3><a href="DistrictGovernorBrendaWaugh.html">District Governor Brenda Waugh visits Ayr</a></h3>
 									<p class="news-date">Posted February 8, 2026</p>
 									<p>
 										The guest speaker at our recent meeting was District Governor Brenda Waugh,
 										who is a member of the Annan Rotary Club. As well as her vision for the
-										District, Brenda’s talk was on her recent visit to Mumbai in India. [...]
+										District, Brenda's talk was on her recent visit to Mumbai in India. [...]
 									</p>
 								</article>
 
 							</div>
 						</div>
+
 						<aside class="news-sidebar">
-
-
-
 
 							<div class="news-sidebar-box">
 								<h3>Archives</h3>
@@ -350,7 +386,6 @@
 								<br />
 								<a href="#" class="button small news-search-button" id="news-search-button">Search</a>
 							</div>
-
 
 							<div class="news-sidebar-box">
 								<h3>Categories</h3>
