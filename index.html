@@ -20,68 +20,134 @@
 			overflow-x: hidden;
 		}
 
-		.top-image {
+		.home-spots {
+			max-width: 1100px;
+			margin: 2.5em auto 3.5em auto;
+			padding: 0 2em;
+			box-sizing: border-box;
+
+			column-count: 3;
+			column-gap: 2em;
+		}
+
+		.home-spot {
+			display: inline-block;
 			width: 100%;
-			height: 450px;
-			display: block;
-			clear: both;
-			margin: 0;
-			padding: 0;
-			background: url("images/TopImage.jpg") center center / cover no-repeat;
-		}
-
-		.home-panels {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 2em;
-			margin: 3em 0;
-			padding: 0 2em 3em 2em;
+			margin: 0 0 2em 0;
+			padding: 1.35em;
 			box-sizing: border-box;
+			background: #f4f4f4;
+			border: 1px solid #d7d7d7;
+			border-radius: 4px;
+			vertical-align: top;
+			break-inside: avoid;
+			-webkit-column-break-inside: avoid;
+			page-break-inside: avoid;
 		}
 
-		.panel-card {
-			background: #f7f7f7;
-			border: 1px solid #dcdcdc;
-			border-radius: 8px;
-			box-sizing: border-box;
-			padding: 1.5em;
-		}
-
-		.panel-card h3 {
+		.home-spot h3 {
 			margin-top: 0;
 			margin-bottom: 0.75em;
+			font-size: 1.25em;
+			line-height: 1.25;
 		}
 
-		.panel-card p {
-			margin-bottom: 1.25em;
+		.home-spot p {
+			margin-bottom: 1em;
+			line-height: 1.5;
 		}
 
-		.panel-card .button {
-			margin: 0;
+		.home-spot .button {
+			margin-top: 0.25em;
 		}
 
-		.panel-image {
+		.home-spot ul {
+			margin: 0 0 1em 0;
+			padding-left: 1.1em;
+		}
+
+		.home-spot li {
+			margin-bottom: 0.65em;
+			line-height: 1.4;
+		}
+
+		.spot-image {
+			display: block;
+			width: 100%;
 			max-width: 100%;
+			height: auto;
+			margin-top: 1em;
+			border: 0;
+		}
+
+		.spot-small-image {
+			display: block;
+			max-width: 180px;
+			width: 100%;
+			height: auto;
+			margin: 1em auto 0 auto;
+		}
+
+		.newsletter-box {
+			background: #1756a9;
+			color: #ffffff;
+		}
+
+		.newsletter-box h3,
+		.newsletter-box p {
+			color: #ffffff;
+		}
+
+		.newsletter-box input {
+			width: 100%;
+			margin-bottom: 1em;
+			box-sizing: border-box;
+		}
+
+		.newsletter-box .button {
+			width: 100%;
+			text-align: center;
+		}
+
+		.site-footer {
+			background: #6388df;
+			color: #ffffff;
+			padding: 2.5em 2em;
+		}
+
+		.site-footer-inner {
+			max-width: 1100px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3em;
+		}
+
+		.site-footer h3,
+		.site-footer p,
+		.site-footer a {
+			color: #ffffff;
+		}
+
+		.footer-image {
+			max-width: 220px;
+			width: 100%;
 			height: auto;
 			display: block;
 			margin-top: 1em;
 		}
 
 		@media screen and (max-width: 980px) {
-			.home-panels {
-				grid-template-columns: repeat(2, 1fr);
+			.home-spots {
+				column-count: 2;
+			}
+
+			.site-footer-inner {
+				grid-template-columns: 1fr;
 			}
 		}
 
 		@media screen and (max-width: 736px) {
-
-			/*
-				iPhone fixes:
-				- prevent sideways overflow
-				- keep blue banner inside screen width
-				- allow navigation to wrap
-				- keep top picture banner inside screen width
-			*/
 
 			html,
 			body,
@@ -138,11 +204,6 @@
 				box-sizing: border-box !important;
 			}
 
-			/*
-				Top picture banner fix.
-				This is the section that controls the large image under the blue banner.
-			*/
-
 			.top-image,
 			.top-image-fade {
 				width: 100% !important;
@@ -172,43 +233,32 @@
 				margin-left: 0 !important;
 				margin-right: 0 !important;
 				box-sizing: border-box !important;
-				background-size: cover !important;
+				background-size: 96% auto !important;
 				background-position: center center !important;
 				background-repeat: no-repeat !important;
 				overflow: hidden !important;
 			}
 
-			/*
-				If there is any text placed over the picture,
-				this keeps it inside the iPhone screen.
-			*/
-
-			.top-image-fade h1,
-			.top-image-fade h2,
-			.top-image-fade h3,
-			.top-image-fade p,
-			.top-image-fade span,
-			.top-image-fade div {
-				max-width: 100% !important;
-				box-sizing: border-box !important;
-			}
-
-			.home-panels {
-				grid-template-columns: 1fr;
-				gap: 1.25em;
-				margin: 1.5em 0;
+			.home-spots {
+				column-count: 1;
+				column-gap: 0;
+				margin: 1.5em auto 2.5em auto;
 				padding-left: 1.1em;
 				padding-right: 1.1em;
-				padding-bottom: 2em;
-				box-sizing: border-box;
 			}
 
-			.panel-card {
+			.home-spot {
+				margin-bottom: 1.25em;
 				padding: 1.25em;
 			}
 
-			.panel-card p {
+			.home-spot p,
+			.home-spot li {
 				line-height: 1.55;
+			}
+
+			.site-footer {
+				padding: 2em 1.25em;
 			}
 		}
 	</style>
@@ -216,10 +266,8 @@
 
 <body class="is-preload">
 
-	<!-- Wrapper -->
 	<div id="wrapper">
 
-		<!-- Main -->
 		<div id="main">
 
 			<header id="header">
@@ -247,127 +295,259 @@
 				<div class="top-image-slide slide2"></div>
 			</div>
 
-			<section class="home-panels">
+			<section class="home-spots">
 
-				<div class="panel-card">
+				<div class="home-spot">
 					<h3>Upcoming Meetings</h3>
 
 					<p>
-						<strong>Council Meeting</strong><br />
-						Tue 14 April, 6.00pm-8.00pm<br />
-						The Stravaig, 11 Miller Road, Ayr KA7 2AX
+						<strong>AGM &amp; Club Business Meeting</strong><br />
+						<strong>When:</strong> Tue May 19 18:00 - 19:30<br />
+						<strong>Where:</strong> The Stravaig - 11 Miller Road, Ayr KA7 2AX
 					</p>
 
 					<p>
 						<strong>Rotary Breakfast Meeting</strong><br />
-						Thu 16 April, 8.30am-9.15am<br />
-						Cafe 51, 51 Beresford Terrace, Ayr
+						<strong>When:</strong> Thu May 21 08:30 - 09:15<br />
+						<strong>Where:</strong> Cafe 51 - 51 Beresford Terrace, Ayr
 					</p>
 
-					<a href="meetings.html" class="button small">See More Meetings</a>
+					<p><a href="meetings.html"><strong>See more Meetings</strong></a></p>
 				</div>
 
-				<div class="panel-card">
-					<h3>New Members Welcome!</h3>
-
-					<p>
-						<a href="NewMembersWelcome.html">Thinking of joining the Rotary Club of Ayr?</a>
-					</p>
-
-					<p>
-						We are one of the largest and most active clubs in Ayrshire, and indeed
-						in the whole of District 1320, which covers all of south Scotland, and
-						have been successful in recruiting new members recently. Come along to a
-						meeting to find out why others joined our club.
-					</p>
-
-					<a href="NewMembersWelcome.html" class="button small">Find Out More</a>
-				</div>
-
-				<div class="panel-card">
-					<h3>Upcoming Events for Members</h3>
-
-					<p>&#8250; <strong>Annual Beach Clean</strong> - Saturday 25 April 2026</p>
-
-					<p>&#8250; <strong>Annual Charity Golf Day</strong> - Belleisle Golf - Friday 8 May 2026</p>
-
-					<p>&#8250; <strong>Careers Fair</strong> - Thursday 14 May 2026</p>
-
-					<p>&#8250; <strong>Ayrshire Alps Cycling Sportive</strong> - Saturday 6 June 2026</p>
-
-					<a href="news.html" class="button small">See More Events</a>
-				</div>
-
-				<div class="panel-card">
+				<div class="home-spot">
 					<h3>Event Booking - Members</h3>
-
 					<p>
 						March 2026: We have introduced a new booking system using WhatsApp.
 						Anyone having difficulties should contact Bob Cherry.
 					</p>
-
-					<a href="contact.html" class="button small">Contact Bob Cherry</a>
 				</div>
 
-				<div class="panel-card treasure-card">
-					<h3>TREASURE CHEST</h3>
+				<div class="home-spot">
+					<h3>Welcome Duty Roster</h3>
+					<p>Please check the Roster</p>
+					<p><a href="members-login.html"><strong>Click here</strong></a></p>
+				</div>
 
+				<div class="home-spot">
+					<h3>Easyfundraising</h3>
+					<p>
+						Easyfundraising is a simple way for the club to raise money.
+						Just sign up by scanning the code below and when you shop online,
+						a percentage goes to the club.
+					</p>
+					<p>
+						It costs you nothing extra - the retailer pays it.
+					</p>
+					<p>
+						When you scan the code, or <a href="#">click this link</a>, you will be taken
+						to a website where you can find a full explanation.
+					</p>
+
+					<img src="images/easyfundraising-qr.jpg" alt="Easyfundraising QR code" class="spot-small-image" />
+				</div>
+
+				<div class="home-spot">
+					<h3>Where and When</h3>
+
+					<p>
+						<strong>Evening meetings:</strong> Usually in The Stravaig Restaurant,
+						11 Miller Road, Ayr KA7 2AX every Tuesday except Council Meeting weeks.
+					</p>
+
+					<p>
+						<strong>Breakfast chat:</strong> Cafe 51, 51 Beresford Terrace,
+						Ayr, first and third Thursday in the month, 8.30am - 9.30am.
+					</p>
+				</div>
+
+				<div class="home-spot">
+					<h3>The Whetstone Tech Workshop</h3>
+					<p>
+						Ayr Rotary have led the way in setting up a great new initiative
+						for young entrepreneurs in the tech industry.
+						<a href="#">Find out more</a>.
+					</p>
+
+					<img src="images/whetstone-hub.jpg" alt="The Whetstone Hub" class="spot-image" />
+				</div>
+
+				<div class="home-spot">
+					<h3>Facebook</h3>
+					<p>
+						Have you checked our Facebook recently? There is a lot more going on
+						thanks to our new administrator.
+					</p>
+					<p>
+						<a href="#">Rotary in Ayr on Facebook</a>
+					</p>
+				</div>
+
+				<div class="home-spot">
+					<h3>New Members Welcome!</h3>
+					<p>
+						<a href="NewMembersWelcome.html">Thinking of joining the Rotary Club of Ayr?</a>
+					</p>
+					<p>
+						We are one of the largest and most active clubs in Ayrshire, and indeed
+						in the whole of District 1320, which covers all of south Scotland.
+						Come along to a meeting to find out why these people joined our club.
+					</p>
+				</div>
+
+				<div class="home-spot">
+					<h3>Treasure Chest</h3>
 					<p>
 						Would a cash donation help your organisation?
 					</p>
-
 					<p>
 						We offer a monthly payout to individuals or organisations of up to £250.
 						The qualifying rules are simple.
+						<a href="TreasureChest.html">Find out more</a>.
 					</p>
 
-					<p>
-						<a href="TreasureChest.html">Find out more</a>
-					</p>
-
-					<img src="images/treasure-chest.jpg" alt="Treasure Chest" class="panel-image" />
+					<img src="images/treasure-chest.jpg" alt="Treasure Chest" class="spot-image" />
 				</div>
 
-				<div class="panel-card">
-					<h3>Get Involved</h3>
+				<div class="home-spot">
+					<h3>Rotary &amp; the Environment</h3>
+					<p>
+						Rotary International's approval in 2020 of a new area of focus,
+						and the hosting in Glasgow in November 2021 of the COP26 international
+						conference, has prompted consideration of how environmental problems
+						facing the world might best be resolved.
+					</p>
+					<p>
+						Although we might feel individually helpless faced with such enormous
+						problems, we can all make our own small contributions if we
+						<strong>THINK GLOBAL - ACT LOCAL</strong>.
+					</p>
+					<a href="projects.html" class="button small">Read More</a>
+				</div>
 
+				<div class="home-spot">
+					<h3>Latest News</h3>
+					<ul>
+						<li><a href="news.html">Annual Careers Fair for primary schools in Ayr Town Hall</a></li>
+						<li><a href="news.html">The Carrick Resilience Team</a></li>
+						<li><a href="news.html">Ken Nairn on Richard Oswald of Auchincruive</a></li>
+						<li><a href="news.html">Ayr Rotary Charity Golf Day</a></li>
+						<li><a href="news.html">Professor Sathish Srinivasan</a></li>
+						<li><a href="news.html">Lies, lies and maybe truth</a></li>
+						<li><a href="news.html">Ayr Rotary's Annual Beach Clean</a></li>
+						<li><a href="news.html">Skip David Hope's review of the Rotary Worlds Curling</a></li>
+					</ul>
+				</div>
+
+				<div class="home-spot">
+					<h3>Photo of the Month Award</h3>
+					<p>
+						This month's winner is Douglas Haddow with "Arran Mountains".
+						Click for full image.
+					</p>
+					<img src="images/photo-of-the-month.jpg" alt="Photo of the Month" class="spot-image" />
+				</div>
+
+				<div class="home-spot">
+					<h3>Upcoming Events for Members</h3>
+					<ul>
+						<li><strong>Annual Charity Golf Day</strong> - Belleisle Golf - Friday 8 May 2026</li>
+						<li><strong>Careers Fair</strong> - Thursday 14 May 2026</li>
+						<li><strong>Ayrshire Alps Cycling Sportive</strong> - Saturday 6 June 2026</li>
+					</ul>
+				</div>
+
+				<div class="home-spot">
+					<h3>Get Involved</h3>
 					<p>
 						We are very keen to have non-members assist in some of our projects.
 						This is a great way to help the local community without any commitment
-						to joining. If you then think Rotary is for you, come along to a few
-						meetings to find out more.
+						to joining.
 					</p>
-
 					<p>
 						You may wish to help at the local Food Bank or on the
 						<a href="AyrshireCoastalPath.html"><strong>Ayrshire Coastal Path</strong></a>.
-						Or work on our various youth activities. Perhaps help run our Charity
-						Golf Day or simply do some litter picking. There are lots of ways to
-						get involved.
+						Or work on our various youth activities.
+						<a href="GetInvolved.html">Read more</a>.
 					</p>
-
-					<p>
-						<a href="GetInvolved.html"><strong>Read more &gt;&gt;</strong></a>
-					</p>
-
 					<p>
 						Or you may wish to make a donation, which allows us to help others.
-						Click the "Donate" button - you do not need a PayPal account, simply
-						use your debit or credit card.
+					</p>
+					<img src="images/donate-button.jpg" alt="Donate button" class="spot-image" />
+				</div>
+
+				<div class="home-spot">
+					<h3>Aquabox Latest</h3>
+					<p>
+						<a href="AquaboxAnnbank.html">Find out more about Aquabox</a>
+					</p>
+					<p>
+						<a href="AquaboxAnnbank.html">See the recent visit to Annbank Primary School</a>
+					</p>
+				</div>
+
+				<div class="home-spot">
+					<h3>Aquabox Video</h3>
+					<p>
+						One of our major on-going projects is to support Aquabox.
+						Have a look at their new video below.
+					</p>
+					<p>
+						More information on our <a href="AquaboxAnnbank.html">Aquabox page</a>.
+					</p>
+					<img src="images/aquabox-video.jpg" alt="Aquabox video" class="spot-image" />
+				</div>
+
+				<div class="home-spot newsletter-box">
+					<h3>Newsletter</h3>
+					<p>
+						Sign up for latest on Ayr Rotary projects and initiatives.
 					</p>
 
-					<img src="images/donate-button.jpg" alt="Donate button" class="panel-image" />
+					<input type="email" placeholder="Email" />
+					<input type="text" placeholder="First name" />
+					<input type="text" placeholder="Last name" />
+
+					<p style="font-size: 0.8em;">
+						You can unsubscribe anytime. For more details, review the Privacy Notice on our website.
+					</p>
+
+					<a href="#" class="button small">Subscribe</a>
 				</div>
 
 			</section>
 
+			<footer class="site-footer">
+				<div class="site-footer-inner">
+
+					<div>
+						<h3>Rotary in Ayr</h3>
+						<img src="images/FacebookLink.jpg" alt="Rotary in Ayr Facebook link" class="footer-image" />
+					</div>
+
+					<div>
+						<h3>Contact</h3>
+						<p>
+							Secretary Bob Cherry<br />
+							07831 407101<br />
+							<a href="mailto:bob.a.cherry@btinternet.com">bob.a.cherry@btinternet.com</a>
+						</p>
+					</div>
+
+					<div>
+						<h3>Privacy Notice</h3>
+						<p>
+							<a href="privacy.html">Read our Privacy Notice</a>
+						</p>
+					</div>
+
+				</div>
+			</footer>
+
 		</div>
-		<!-- End Main -->
 
 	</div>
-	<!-- End Wrapper -->
 
-	<!-- Scripts -->
 	<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
