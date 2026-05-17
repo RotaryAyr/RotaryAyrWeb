@@ -5,183 +5,384 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Meetings - AYR ROTARY</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
 
-		<style>
-			.meetings-page {
-				max-width: 1100px;
-				margin: 0 auto;
-				padding: 3em 2em 4em 2em;
-				box-sizing: border-box;
-			}
+<head>
+	<title>Meetings - AYR ROTARY</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 
+	<style>
+		html,
+		body {
+			max-width: 100%;
+			overflow-x: hidden;
+		}
+
+		.meetings-page {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 3em 2em 4em 2em;
+			box-sizing: border-box;
+		}
+
+		.meetings-grid {
+			display: grid;
+			grid-template-columns: 1.35fr 1fr;
+			gap: 4em;
+			align-items: start;
+		}
+
+		.meetings-page h2 {
+			margin-bottom: 0.6em;
+		}
+
+		.meetings-page h3 {
+			margin-bottom: 1.25em;
+		}
+
+		.meeting-item {
+			margin-bottom: 1.65em;
+		}
+
+		.meeting-item h4 {
+			margin: 0 0 0.55em 0;
+			font-size: 1.25em;
+			line-height: 1.15;
+		}
+
+		.meeting-item p {
+			margin-bottom: 0.8em;
+			line-height: 1.5;
+		}
+
+		.meeting-description {
+			margin-top: 0.75em;
+		}
+
+		.meetings-sidebox {
+			padding-top: 2.4em;
+			box-sizing: border-box;
+		}
+
+		.meetings-sidebox h3 {
+			margin-top: 0;
+			margin-bottom: 0.75em;
+		}
+
+		.meetings-map {
+			width: 100%;
+			max-width: 480px;
+			height: auto;
+			display: block;
+			margin-top: 2em;
+		}
+
+		.site-footer {
+			background: #6388df;
+			color: #ffffff;
+			padding: 2.5em 2em;
+		}
+
+		.site-footer-inner {
+			max-width: 1100px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 3em;
+		}
+
+		.site-footer h3,
+		.site-footer p,
+		.site-footer a {
+			color: #ffffff;
+		}
+
+		.footer-image {
+			max-width: 220px;
+			width: 100%;
+			height: auto;
+			display: block;
+			margin-top: 1em;
+		}
+
+		@media screen and (max-width: 980px) {
 			.meetings-grid {
-				display: grid;
-				grid-template-columns: 1.4fr 1fr;
-				gap: 3em;
-				align-items: start;
-			}
-
-			.meeting-item {
-				margin-bottom: 2.25em;
-			}
-
-			.meeting-item h4 {
-				margin-bottom: 0.5em;
-			}
-
-			.meeting-item p {
-				margin-bottom: 0.75em;
+				grid-template-columns: 1fr;
+				gap: 2em;
 			}
 
 			.meetings-sidebox {
-				background: #f7f7f7;
-				border: 1px solid #dcdcdc;
-				border-radius: 8px;
-				padding: 1.5em;
-				box-sizing: border-box;
+				padding-top: 0;
 			}
 
-			.meetings-sidebox h3 {
-				margin-top: 0;
+			.site-footer-inner {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media screen and (max-width: 736px) {
+
+			html,
+			body,
+			#wrapper,
+			#main {
+				width: 100% !important;
+				max-width: 100% !important;
+				overflow-x: hidden !important;
+			}
+
+			#header {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				box-sizing: border-box !important;
+				overflow-x: hidden !important;
+			}
+
+			.ayr-topbar {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding-left: 0.5em !important;
+				padding-right: 0.5em !important;
+				box-sizing: border-box !important;
+				overflow-x: hidden !important;
+			}
+
+			.ayr-brand-image {
+				max-width: 100% !important;
+				box-sizing: border-box !important;
+			}
+
+			.ayr-brand-image img {
+				max-width: 100% !important;
+				height: auto !important;
+				display: block !important;
+			}
+
+			.ayr-nav {
+				width: 100% !important;
+				max-width: 100% !important;
+				display: flex !important;
+				flex-wrap: wrap !important;
+				justify-content: center !important;
+				gap: 0.35em !important;
+				box-sizing: border-box !important;
+				overflow-x: hidden !important;
+			}
+
+			.ayr-nav a {
+				white-space: normal !important;
+				box-sizing: border-box !important;
+			}
+
+			.inner {
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+
+			.meetings-page {
+				padding: 2em 1.25em 3em 1.25em;
+			}
+
+			.meetings-page h2 {
+				font-size: 1.8em;
+			}
+
+			.meeting-item {
+				margin-bottom: 1.75em;
+			}
+
+			.meeting-item h4 {
+				font-size: 1.2em;
+			}
+
+			.meeting-item p {
+				line-height: 1.55;
 			}
 
 			.meetings-map {
-				width: 100%;
-				border-radius: 8px;
-				display: block;
-				margin-top: 1em;
+				max-width: 100%;
+				margin-top: 1.5em;
 			}
 
-			@media screen and (max-width: 980px) {
-				.meetings-grid {
-					grid-template-columns: 1fr;
-				}
+			.site-footer {
+				padding: 2em 1.25em;
 			}
+		}
+	</style>
+</head>
 
-			@media screen and (max-width: 736px) {
-				.meetings-page {
-					padding: 2em 1em 3em 1em;
-				}
-			}
-		</style>
-	</head>
+<body class="is-preload">
 
-	<body class="is-preload">
+	<div id="wrapper">
+		<div id="main">
 
-		<div id="wrapper">
-			<div id="main">
+			<header id="header">
+				<div class="ayr-topbar">
+					<a href="index.html" class="ayr-brand-image">
+						<img src="images/ayr-logo-strip.jpg" alt="Rotary Club of Ayr" />
+					</a>
 
-				<header id="header">
-					<div class="ayr-topbar">
-						<a href="index.html" class="ayr-brand-image">
-							<img src="images/ayr-logo-strip.jpg" alt="Rotary Club of Ayr" />
-						</a>
+					<nav class="ayr-nav">
+						<a href="index.html">Home</a>
+						<a href="about.html">About Us</a>
+						<a href="projects.html">Projects</a>
+						<a href="GetInvolved.html">Get Involved</a>
+						<a href="meetings.html" class="active">Meetings</a>
+						<a href="news.html">News</a>
+						<a href="contact.html">Contact</a>
+						<a href="members-login.html">Members</a>
+					</nav>
+				</div>
+			</header>
 
-						<nav class="ayr-nav">
-							<a href="index.html">Home</a>
-							<a href="about.html">About Us</a>
-							<a href="projects.html">Projects</a>
-							<a href="get-involved.html">Get Involved</a>
-							<a href="meetings.html" class="active">Meetings</a>
-							<a href="news.html">News</a>
-							<a href="contact.html">Contact</a>
-						</nav>
-					</div>
-				</header>
+			<div class="inner">
+				<section class="meetings-page">
 
-				<div class="inner">
-					<section class="meetings-page">
-						<header class="major">
-							<h2>Meetings</h2>
-						</header>
+					<h2>Meetings</h2>
 
-						<div class="meetings-grid">
+					<div class="meetings-grid">
 
-							<div>
-								<h3>Upcoming Meetings</h3>
+						<div class="meetings-main">
 
-								<div class="meeting-item">
-									<h4>Council Meeting</h4>
-									<p>
-										<strong>When:</strong> Tue 14 April, 6.00pm-8.00pm<br />
-										<strong>Where:</strong> The Stravaig, 11 Miller Road, Ayr KA7 2AX
-									</p>
-								</div>
+							<h3>Upcoming Meetings</h3>
 
-								<div class="meeting-item">
-									<h4>Rotary Breakfast Meeting</h4>
-									<p>
-										<strong>When:</strong> Thu 16 April, 8.30am-9.15am<br />
-										<strong>Where:</strong> Cafe 51, 51 Beresford Terrace, Ayr
-									</p>
-								</div>
-
-								<div class="meeting-item">
-									<h4>Social / Informal Evening of Truth or Lies</h4>
-									<p>
-										<strong>When:</strong> Tue 21 April, 6.00pm-7.30pm<br />
-										<strong>Where:</strong> The Stravaig, 11 Miller Road, Ayr KA7 2AX
-									</p>
-								</div>
-
-								<div class="meeting-item">
-									<h4>Professor Sathish Srinivasan - on the work of an Ophthalmologist Surgeon</h4>
-									<p>Moment of Reflection and Vote of Thanks: TBC</p>
-									<p>
-										<strong>When:</strong> Tue 28 April, 6.00pm-7.30pm<br />
-										<strong>Where:</strong> Ayr College Westerly Restaurant (KA8 0ET)
-									</p>
-								</div>
-
-								<div class="meeting-item">
-									<h4>Ken Nairn - Richard Oswald of Auchincruive, and his influence upon the birth of the USA</h4>
-									<p>Moment of Reflection and Vote of Thanks: TBC</p>
-									<p>
-										<strong>When:</strong> Tue 5 May, 6.00pm-7.30pm<br />
-										<strong>Where:</strong> The Stravaig, 11 Miller Road, Ayr KA7 2AX
-									</p>
-								</div>
-
-								<div class="meeting-item">
-									<h4>Rotary Breakfast Meeting</h4>
-									<p>
-										<strong>When:</strong> Thu 7 May, 8.30am-9.15am<br />
-										<strong>Where:</strong> Cafe 51, 51 Beresford Terrace, Ayr
-									</p>
-								</div>
+							<div class="meeting-item">
+								<h4>AGM &amp; Club Business Meeting</h4>
+								<p>
+									<strong>When:</strong> Tue May 19 18:00 - 19:30<br />
+									<strong>Where:</strong> The Stravaig - 11 Miller Road, Ayr, KA7 2AX
+								</p>
 							</div>
 
-							<div class="meetings-sidebox">
-								<h3>Weekly Meetings</h3>
+							<div class="meeting-item">
+								<h4>Rotary Breakfast Meeting</h4>
 								<p>
-									We usually meet in The Stravaig Restaurant, 11 Miller Road, Ayr KA7 2AX,
-									at 5.30pm on Tuesdays, except on Council Meeting weeks.
+									<strong>When:</strong> Thu May 21 08:30 - 09:15<br />
+									<strong>Where:</strong> Cafe 51 - 51 Beresford Terrace, Ayr
 								</p>
-								<p>
-									Please check the homepage for any changes and contact the Secretary if
-									you are a visitor.
+							</div>
+
+							<div class="meeting-item">
+								<h4>Social Evening with a Cornhole Tournament</h4>
+
+								<p class="meeting-description">
+									Please note that the Council Meeting originally scheduled for this evening is
+									cancelled. Instead, we shall be holding another Cornhole Tournament.
 								</p>
 
-								<img src="images/stravaig-map.jpg" alt="Map showing The Stravaig in Ayr" class="meetings-map" />
+								<p>
+									Could all attendees please arrive to ensure a prompt start at 6.00pm.
+								</p>
+
+								<p>
+									'Cornhole' is an easy bean bag tossing game, where players take turns to
+									score points by landing bags on a raised board or sinking them through a
+									hole. If we have larger numbers participating, then we shall have shorter
+									games. The MC for the evening shall be Bob Cherry.
+								</p>
+
+								<p>
+									<strong>When:</strong> Tue May 26 18:00 - 19:30<br />
+									<strong>Where:</strong> The Stravaig - 11 Miller Road, Ayr, KA7 2AX
+								</p>
+							</div>
+
+							<div class="meeting-item">
+								<h4>Allan Mackintosh (Aeronautical Society) on Prestwick's Lost Airlines</h4>
+
+								<p>
+									Moment of Reflection &amp; VOT: TBC
+								</p>
+
+								<p>
+									<strong>When:</strong> Tue June 2 18:00 - 19:30<br />
+									<strong>Where:</strong> The Stravaig - 11 Miller Road, Ayr, KA7 2AX
+								</p>
+							</div>
+
+							<div class="meeting-item">
+								<h4>Club Assembly</h4>
+
+								<p>
+									<strong>When:</strong> Tue June 9 18:00 - 19:30<br />
+									<strong>Where:</strong> The Stravaig - 11 Miller Road, Ayr, KA7 2AX
+								</p>
+							</div>
+
+							<div class="meeting-item">
+								<h4>Amanda Nicol - Memory Lane Cafe</h4>
+
+								<p>
+									Moment of Reflection &amp; VOT: TBC
+								</p>
+
+								<p>
+									<strong>When:</strong> Tue June 16 18:00 - 19:30<br />
+									<strong>Where:</strong> The Stravaig - 11 Miller Road, Ayr, KA7 2AX
+								</p>
 							</div>
 
 						</div>
-					</section>
-				</div>
 
+						<aside class="meetings-sidebox">
+							<h3>Weekly Meetings</h3>
+
+							<p>
+								We usually meet in The Stravaig Restaurant, 11 Miller Road, Ayr KA7 2AX,
+								5.30pm on Tuesdays except Council Meeting weeks for a dinner and a guest
+								speaker. Please check homepage for any changes and contact the secretary if
+								you are a visitor.
+							</p>
+
+							<img src="images/stravaig-map.jpg" alt="Map showing The Stravaig in Ayr"
+								class="meetings-map" />
+						</aside>
+
+					</div>
+
+				</section>
 			</div>
+
+			<footer class="site-footer">
+				<div class="site-footer-inner">
+
+					<div>
+						<h3>Rotary in Ayr</h3>
+						<img src="images/FacebookLink.jpg" alt="Rotary in Ayr Facebook link" class="footer-image" />
+					</div>
+
+					<div>
+						<h3>Contact</h3>
+						<p>
+							Secretary Bob Cherry<br />
+							07831 407101<br />
+							<a href="mailto:bob.a.cherry@btinternet.com">bob.a.cherry@btinternet.com</a>
+						</p>
+					</div>
+
+					<div>
+						<h3>Privacy Notice</h3>
+						<p>
+							<a href="privacy.html">Read our Privacy Notice</a>
+						</p>
+					</div>
+
+				</div>
+			</footer>
+
 		</div>
+	</div>
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
