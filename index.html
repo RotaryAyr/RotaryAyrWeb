@@ -5,7 +5,6 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 
-
 <html>
 
 <head>
@@ -55,6 +54,13 @@
 			margin: 0;
 		}
 
+		.panel-image {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin-top: 1em;
+		}
+
 		@media screen and (max-width: 980px) {
 			.home-panels {
 				grid-template-columns: repeat(2, 1fr);
@@ -62,17 +68,39 @@
 		}
 
 		@media screen and (max-width: 736px) {
+			/*
+					Small iPhone-friendly margin.
+					This gives the page breathing room without disturbing the full-width header image.
+				*/
+
 			.home-panels {
 				grid-template-columns: 1fr;
-				padding-left: 1em;
-				padding-right: 1em;
+				gap: 1.25em;
+				margin: 1.5em 0;
+				padding-left: 1.1em;
+				padding-right: 1.1em;
+				padding-bottom: 2em;
+			}
+
+			.panel-card {
+				padding: 1.25em;
+			}
+
+			.panel-card p {
+				line-height: 1.55;
+			}
+
+			.top-image {
+				height: 280px;
+			}
+
+			.top-image-fade {
+				margin-left: 0;
+				margin-right: 0;
 			}
 		}
 	</style>
 </head>
-
-
-
 
 <body class="is-preload">
 
@@ -102,50 +130,47 @@
 				</div>
 			</header>
 
-
-
 			<div class="top-image-fade">
 				<div class="top-image-slide slide1"></div>
 				<div class="top-image-slide slide2"></div>
 			</div>
 
-
-
-
 			<section class="home-panels">
-
 
 				<div class="panel-card">
 					<h3>Upcoming Meetings</h3>
-					<p><strong>Council Meeting</strong><br />
-						Tue 14 April, 6.00pm-8.00pm<br />
-						The Stravaig, 11 Miller Road, Ayr KA7 2AX</p>
 
-					<p><strong>Rotary Breakfast Meeting</strong><br />
+					<p>
+						<strong>Council Meeting</strong><br />
+						Tue 14 April, 6.00pm-8.00pm<br />
+						The Stravaig, 11 Miller Road, Ayr KA7 2AX
+					</p>
+
+					<p>
+						<strong>Rotary Breakfast Meeting</strong><br />
 						Thu 16 April, 8.30am-9.15am<br />
-						Cafe 51, 51 Beresford Terrace, Ayr</p>
+						Cafe 51, 51 Beresford Terrace, Ayr
+					</p>
 
 					<a href="meetings.html" class="button small">See More Meetings</a>
 				</div>
 
-
-
-
 				<div class="panel-card">
 					<h3>New Members Welcome!</h3>
+
 					<p>
 						<a href="NewMembersWelcome.html">Thinking of joining the Rotary Club of Ayr?</a>
 					</p>
+
 					<p>
 						We are one of the largest and most active clubs in Ayrshire, and indeed
 						in the whole of District 1320, which covers all of south Scotland, and
-						have been successful in recruiting new mebers recently. Come along to a
+						have been successful in recruiting new members recently. Come along to a
 						meeting to find out why others joined our club.
 					</p>
+
 					<a href="NewMembersWelcome.html" class="button small">Find Out More</a>
 				</div>
-
-
 
 				<div class="panel-card">
 					<h3>Upcoming Events for Members</h3>
@@ -161,26 +186,24 @@
 					<a href="news.html" class="button small">See More Events</a>
 				</div>
 
-
-
 				<div class="panel-card">
 					<h3>Event Booking - Members</h3>
+
 					<p>
 						March 2026: We have introduced a new booking system using WhatsApp.
 						Anyone having difficulties should contact Bob Cherry.
 					</p>
+
 					<a href="contact.html" class="button small">Contact Bob Cherry</a>
 				</div>
 
-
-
-
-
 				<div class="panel-card treasure-card">
 					<h3>TREASURE CHEST</h3>
+
 					<p>
 						Would a cash donation help your organisation?
 					</p>
+
 					<p>
 						We offer a monthly payout to individuals or organisations of up to £250.
 						The qualifying rules are simple.
@@ -189,11 +212,9 @@
 					<p>
 						<a href="TreasureChest.html">Find out more</a>
 					</p>
-					<img src="images/treasure-chest.jpg" alt="Treasure Chest" class="panel-image">
+
+					<img src="images/treasure-chest.jpg" alt="Treasure Chest" class="panel-image" />
 				</div>
-
-
-
 
 				<div class="panel-card">
 					<h3>Get Involved</h3>
@@ -223,21 +244,24 @@
 						use your debit or credit card.
 					</p>
 
-					<img src="images/donate-button.jpg" alt="Donate button" class="panel-image">
+					<img src="images/donate-button.jpg" alt="Donate button" class="panel-image" />
 				</div>
 
-				<!-- Scripts -->
-				<script type="text/javascript"
-					src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/browser.min.js"></script>
-				<script src="assets/js/breakpoints.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<script src="assets/js/main.js"></script>
+			</section>
 
+		</div>
+		<!-- End Main -->
 
+	</div>
+	<!-- End Wrapper -->
 
-
+	<!-- Scripts -->
+	<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
 </body>
 
