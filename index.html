@@ -80,7 +80,7 @@
 				- prevent sideways overflow
 				- keep blue banner inside screen width
 				- allow navigation to wrap
-				- keep top image inside screen width
+				- keep top picture banner inside screen width
 			*/
 
 			html,
@@ -138,25 +138,58 @@
 				box-sizing: border-box !important;
 			}
 
+			/*
+				Top picture banner fix.
+				This is the section that controls the large image under the blue banner.
+			*/
+
 			.top-image,
 			.top-image-fade {
 				width: 100% !important;
 				max-width: 100% !important;
+				min-width: 0 !important;
+				height: 260px !important;
 				margin-left: 0 !important;
 				margin-right: 0 !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+				position: relative !important;
 				box-sizing: border-box !important;
 				overflow: hidden !important;
 			}
 
-			.top-image {
-				height: 280px;
-			}
-
-			.top-image-slide {
+			.top-image-slide,
+			.slide1,
+			.slide2 {
 				width: 100% !important;
 				max-width: 100% !important;
+				min-width: 0 !important;
+				height: 260px !important;
+				position: absolute !important;
+				top: 0 !important;
 				left: 0 !important;
 				right: 0 !important;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+				box-sizing: border-box !important;
+				background-size: cover !important;
+				background-position: center center !important;
+				background-repeat: no-repeat !important;
+				overflow: hidden !important;
+			}
+
+			/*
+				If there is any text placed over the picture,
+				this keeps it inside the iPhone screen.
+			*/
+
+			.top-image-fade h1,
+			.top-image-fade h2,
+			.top-image-fade h3,
+			.top-image-fade p,
+			.top-image-fade span,
+			.top-image-fade div {
+				max-width: 100% !important;
 				box-sizing: border-box !important;
 			}
 
