@@ -29,11 +29,13 @@
 			margin-bottom: 0.8em;
 		}
 
-		.news-post {
+		.news-post,
+		.news-item {
 			margin-bottom: 2.5em;
 		}
 
-		.news-post h3 {
+		.news-post h3,
+		.news-item h3 {
 			margin-bottom: 0.25em;
 			font-size: 1.35em;
 		}
@@ -44,7 +46,8 @@
 			margin-bottom: 0.8em;
 		}
 
-		.news-post p {
+		.news-post p,
+		.news-item p {
 			margin-bottom: 0;
 		}
 
@@ -90,6 +93,19 @@
 			border-bottom: none;
 		}
 
+		.news-categories a.active-category {
+			font-weight: bold;
+			color: #ff0000 !important;
+		}
+
+		.news-no-results {
+			display: none;
+			padding: 1em;
+			background: #f4f4f4;
+			border: 1px solid #d7d7d7;
+			border-radius: 4px;
+		}
+
 		.news-footer-panel {
 			margin-top: 4em;
 			padding-top: 2em;
@@ -125,12 +141,7 @@
 
 		@media screen and (max-width: 736px) {
 
-			/*
-				Stronger iPhone-friendly spacing.
-				This overrides the default HTML5 UP mobile spacing.
-			*/
-
-			#main > .inner {
+			#main>.inner {
 				width: auto !important;
 				max-width: none !important;
 				margin-left: 0 !important;
@@ -152,16 +163,19 @@
 				gap: 2em;
 			}
 
-			.news-post {
+			.news-post,
+			.news-item {
 				margin-bottom: 2em;
 			}
 
-			.news-post h3 {
+			.news-post h3,
+			.news-item h3 {
 				font-size: 1.2em;
 				line-height: 1.35;
 			}
 
-			.news-post p {
+			.news-post p,
+			.news-item p {
 				line-height: 1.55;
 			}
 
@@ -216,202 +230,161 @@
 
 						<div class="news-main">
 							<h2>News</h2>
-							
 
 							<div id="news-archive">
 
-							<article class="news-post" data-month="2026-05" data-category="visits"
-	data-search="Isle of Bute">
-	<h3><a href="Rothesay.html">Discover the Isle of Bute</a></h3>
-	<p class="news-date">Posted May, 2026</p>
-	<p>
-		Explore the beautiful Isle of Bute on a scenic small-group day trip, featuring Mount Stuart House, Rothesay promenade, and stunning Scottish island landscapes.
-	</p>
-</article>
-								
-								
-								
-								<article class="news-post" data-month="2026-04" data-category="visits"
-									data-search="Whitelee Windfarm">
+								<article class="news-post news-item" data-month="2026-05" data-category="visits"
+									data-search="may 2026 isle of bute rothesay mount stuart small group day trip scottish island landscapes">
+									<h3><a href="Rothesay.html">Discover the Isle of Bute</a></h3>
+									<p class="news-date">Posted May, 2026</p>
+									<p>
+										Explore the beautiful Isle of Bute on a scenic small-group day trip, featuring
+										Mount Stuart House, Rothesay promenade, and stunning Scottish island landscapes.
+									</p>
+								</article>
+
+								<article class="news-post news-item" data-month="2026-04" data-category="visits"
+									data-search="april 2026 whitelee windfarm visit external visit wind farm misty morning ayr rotarians organised tour">
 									<h3><a href="Whitelee_windfarm.html">Visit to Whitelee Wind Farm</a></h3>
 									<p class="news-date">Posted April 15, 2026</p>
 									<p>
-										Seven hardy Ayr Rotarians braved a misty, dreitch morning to experience an excellent, organised tour round the whole Whitelee Windfarm site.
+										Seven hardy Ayr Rotarians braved a misty, dreitch morning to experience an
+										excellent, organised tour round the whole Whitelee Windfarm site.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-04" data-category="curling"
-									data-search="Lies, lies and maybe truth">
+								<article class="news-post news-item" data-month="2026-04" data-category="events"
+									data-search="april 2026 lies truth social event stravaig douglas stuart haddow can you spot a truth or lie">
 									<h3><a href="Lies,lies and maybe truth.html">Lies, lies and maybe truth</a></h3>
 									<p class="news-date">Posted April 15, 2026</p>
 									<p>
-										Was “boycott”  a Victorian urchin caught stealing bread? to arresting Bill McLaren outside Murrayfield, only two of the “Truth/Lies” scenarios delivered during a hilarious evening in Stravaig at the recent Ayr Rotary “Can you spot a truth or a lie” evening. Also up for interrogation was a Rotary member from their student youth, damaging a Versace top at an Elton John party. A fun night, compered by Douglas Stuart Haddow was enjoyed by all.[...]
+										From whether “boycott” was a Victorian urchin caught stealing bread to arresting
+										Bill McLaren outside Murrayfield, these were only two of the “Truth/Lies”
+										scenarios delivered during a hilarious evening in Stravaig.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-04" data-category="curling"
+								<article class="news-post news-item" data-month="2026-04" data-category="curling"
 									data-search="april 2026 david hope rotary worlds curling stranraer north west castle ice rink hotel foreign competitors friendship">
 									<h3><a href="DavidHopeCurling.html">Skip David Hope's review of the Rotary Worlds
 											Curling</a></h3>
 									<p class="news-date">Posted April 15, 2026</p>
 									<p>
-										Well, what I can say about the Rotary Worlds at Stranraer. Our
-										foreign competitors were overwhelmed by the North West Castle
-										and the fact the ice rink and hotel were all on the same site.
-										Having set off for Stranraer on Thursday 2nd April, all
-										competitors were making their way to Stranraer for what [...]
+										David Hope reflects on the Rotary Worlds at Stranraer, where competitors
+										gathered at the North West Castle for curling, friendship and fellowship.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-04" data-category="new-member"
+								<article class="news-post news-item" data-month="2026-04" data-category="new-member"
 									data-search="april 2026 garry smith new member career history software business advisers consultancies economic development metallurgy strathclyde coatbridge stranraer ayr">
 									<h3><a href="GarrySmithCareer.html">New Member Garry Smith's Career History</a></h3>
 									<p class="news-date">Posted April 8, 2026</p>
 									<p>
-										Rotarian Garry Smith spent a career specialising in software
-										tools and services for business advisers, management
-										consultancies and economic development agencies, with
-										applications created for numerous organisations throughout
-										the UK and abroad. Garry, a retired metallurgist, was born
-										and grew up in Stranraer, moving to Ayr in 1985. He graduated
-										in Metallurgy from Strathclyde University and then secured
-										a role in RB Tennent, Coatbridge, steel roll manufacturers,
-										before [...]
+										Rotarian Garry Smith spent a career specialising in software tools and services
+										for business advisers, management consultancies and economic development
+										agencies.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-04" data-category="community"
+								<article class="news-post news-item" data-month="2026-04" data-category="community"
 									data-search="april 2026 poppy appeal results 2025 ayr ayrshire poppy scotland donations generosity fundraising">
 									<h3><a href="PoppyAppealResults2025.html">Incredible 2025 Poppy Appeal Results</a>
 									</h3>
 									<p class="news-date">Posted April 4, 2026</p>
 									<p>
-										Wow! Such generosity from the people of Ayrshire. The 2025
-										Poppy Appeal administered by Ayr Rotary in Ayr generated an
-										amazing £13,796.36. Pleasingly, in these times of austerity,
-										the amount raised was more than we achieved in 2024. A huge
-										thank you to all who contributed and supported this worthy
-										cause. (Poppy Scotland published [...]
+										The 2025 Poppy Appeal administered by Ayr Rotary generated an amazing
+										£13,796.36, with thanks to all who contributed and supported this worthy cause.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-04" data-category="curling"
+								<article class="news-post news-item" data-month="2026-04" data-category="curling"
 									data-search="april 2026 five hundred years of roaring john burns curling stones ice sweepers skip history">
 									<h3><a href="FiveHundredYearsOfRoaring.html">500 Years of Roaring</a></h3>
 									<p class="news-date">Posted April 1, 2026</p>
 									<p>
-										Ayr Rotary welcomed Dr John Burns to talk about "five hundred
-										years of roaring" referring to the sound of curling stones as
-										they travel down the ice. Every stone said John, is watched
-										by two sweepers and a skip standing in the target area and
-										they need to continually assess whether to sweep or not. [...]
+										Ayr Rotary welcomed Dr John Burns to talk about “five hundred years of roaring”,
+										referring to the sound of curling stones as they travel down the ice.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-03" data-category="community"
+								<article class="news-post news-item" data-month="2026-03" data-category="community"
 									data-search="march 2026 police scotland stewarton equine centre govan traffic mounted police east ayrshire equine animals stables">
 									<h3><a href="PoliceVisit.html">Police Scotland visit to Stewarton Equine Centre and
 											Govan Traffic</a></h3>
 									<p class="news-date">Posted March 23, 2026</p>
 									<p>
-										Scotland's mounted police work out of Stewarton in East
-										Ayrshire and provide policing for high-profile events across
-										Scotland. Ayr Rotary Club were privileged to engage with the
-										staff and their magnificent equine animals on a recent visit
-										to their stables. Mounted officers carry out public order
-										patrols and are a presence at sporting events, demonstrations [...]
+										Ayr Rotary Club were privileged to meet staff and their magnificent equine
+										animals during a visit to Scotland's mounted police base at Stewarton.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-03" data-category="aquabox"
+								<article class="news-post news-item" data-month="2026-03" data-category="aquabox"
 									data-search="march 2026 aquabox annbank primary school charity water filters safe drinking water disasters volunteer led">
 									<h3><a href="AquaboxAnnbank.html">Aquabox at Annbank Primary School</a></h3>
 									<p class="news-date">Posted March 21, 2026</p>
 									<p>
-										Aquabox, supported by Ayr Rotary Club, is a UK charity family
-										and community providing water filters distributed around the
-										world to countries suffering from natural and man-made
-										disasters, providing safe drinking water to hundreds of
-										thousands of people. Aquabox is almost entirely a
-										volunteer-led organisation, with one part-time paid
-										administrator, so the proportion of total [...]
+										Aquabox, supported by Ayr Rotary Club, provides water filters around the world
+										to communities affected by natural and man-made disasters.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-03" data-category="guest-speakers"
+								<article class="news-post news-item" data-month="2026-03" data-category="guest-speakers"
 									data-search="march 2026 derek alexander culzean castle archaeology neilston east renfrewshire university of edinburgh west central scotland">
 									<h3><a href="DerekAlexanderCulzean.html">Derek Alexander on Culzean Castle</a></h3>
 									<p class="news-date">Posted March 7, 2026</p>
 									<p>
-										At a recent Ayr Rotary meeting, we were privileged to hear
-										Derek Alexander's presentation on Culzean. He was brought up
-										in Neilston, East Renfrewshire and qualified from University
-										of Edinburgh with an MA Honours degree in Archaeology and then
-										an MPhil study on the "Later prehistoric and proto-historic
-										settlement of west central Scotland". Derek then [...]
+										Ayr Rotary heard Derek Alexander's presentation on Culzean, drawing on his
+										archaeological background and wide experience in west central Scotland.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-03" data-category="guest-speakers"
+								<article class="news-post news-item" data-month="2026-03" data-category="guest-speakers"
 									data-search="march 2026 fraser maitland inspiring young entrepreneurs glasgow school of art enterprise manager university of the west of scotland business">
-									<h3><a href="FraserMaitlandEntrepreneurs.html">Fraser Maitland, "Inspiring Young
-											Entrepreneurs"</a></h3>
+									<h3><a href="FraserMaitlandEntrepreneurs.html">Fraser Maitland, “Inspiring Young
+											Entrepreneurs”</a></h3>
 									<p class="news-date">Posted March 5, 2026</p>
 									<p>
-										The Rotary Club of Ayr very much welcomed and thoroughly
-										enjoyed an inspirational talk from Fraser Maitland entitled
-										'Inspiring Young Entrepreneurs'. Fraser, a graduate from the
-										Glasgow School of Art and a very successful entrepreneur
-										himself running a number of successful companies. He is also,
-										currently, the 'Enterprise Manager' at the University of the
-										West of Scotland, supporting [...]
+										The Rotary Club of Ayr welcomed an inspirational talk from Fraser Maitland on
+										encouraging and supporting young entrepreneurs.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-02" data-category="environment"
+								<article class="news-post news-item" data-month="2026-02" data-category="environment"
 									data-search="february 2026 waste management alasdair meldrum albion environmental recycling environment health safety batteries waste crime construction industries">
 									<h3><a href="WasteManagementMeldrum.html">Waste Management by Alasdair Meldrum</a>
 									</h3>
 									<p class="news-date">Posted February 23, 2026</p>
 									<p>
-										Albion Environmental Limited was established in 2002 and has
-										developed into one of the UK's leading consultants specialising
-										in waste management, environmental, health and safety
-										solutions. They deliver strategic advice, support and training
-										to the waste management and construction industries in both
-										the public and private sectors. MD Alasdair Meldrum launched
-										into a fact packed [...]
+										Alasdair Meldrum of Albion Environmental gave a fact-packed talk on waste
+										management, recycling, environmental issues and health and safety.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-02" data-category="curling"
-									data-search="annual rotary bonspiel perth curling dewar charity event">
+								<article class="news-post news-item" data-month="2026-02" data-category="curling"
+									data-search="february 2026 annual rotary bonspiel perth curling dewar charity event matt murdoch willie jamieson young curlers">
 									<h3><a href="AnnualRotaryBonspielPerth.html">Annual Rotary Bonspiel in Perth</a>
 									</h3>
 									<p class="news-date">Posted February 20, 2026</p>
 									<p>
-										Many thanks to everyone who participated in the 2026 event of
-										the Annual Rotary Charity Bonspiel at Dewars Centre, Perth,
-										which was once again a great success, raising around £1,060
-										for the charities - the Matt Murdoch Foundation, the Willie
-										Jamieson Curling Fund, and Perth Young Curlers. On the basis
-										that the scoring system is [...]
+										The 2026 Annual Rotary Charity Bonspiel at Dewars Centre, Perth, was again a
+										great success, raising around £1,060 for charities.
 									</p>
 								</article>
 
-								<article class="news-post" data-month="2026-02" data-category="guest-speakers"
+								<article class="news-post news-item" data-month="2026-02" data-category="guest-speakers"
 									data-search="february 2026 brenda waugh district governor annan rotary mumbai india">
 									<h3><a href="DistrictGovernorBrendaWaugh.html">District Governor Brenda Waugh visits
 											Ayr</a></h3>
 									<p class="news-date">Posted February 8, 2026</p>
 									<p>
-										The guest speaker at our recent meeting was District Governor Brenda Waugh,
-										who is a member of the Annan Rotary Club. As well as her vision for the
-										District, Brenda's talk was on her recent visit to Mumbai in India. [...]
+										District Governor Brenda Waugh visited Ayr Rotary and spoke about her vision for
+										the District and her recent visit to Mumbai in India.
 									</p>
 								</article>
 
 							</div>
+
+							<p class="news-no-results" id="news-no-results">No matching news items found.</p>
 						</div>
 
 						<aside class="news-sidebar">
@@ -420,6 +393,7 @@
 								<h3>Archives</h3>
 								<select class="news-archive-select" id="news-month-filter">
 									<option value="">All months</option>
+									<option value="2026-05">May 2026</option>
 									<option value="2026-04">April 2026</option>
 									<option value="2026-03">March 2026</option>
 									<option value="2026-02">February 2026</option>
@@ -431,40 +405,20 @@
 									placeholder="What are you looking for?" />
 								<br />
 								<a href="#" class="button small news-search-button" id="news-search-button">Search</a>
+								<p><a href="#" id="news-clear-filter">Clear search/filter</a></p>
 							</div>
 
 							<div class="news-sidebar-box">
 								<h3>Categories</h3>
 								<ul class="news-categories">
-									<li><a href="#">AquaBox</a></li>
-									<li><a href="#">Ayrshire Coastal Path</a></li>
-									<li><a href="#">Beach Clean</a></li>
-									<li><a href="#">Charity Event</a></li>
-									<li><a href="#">Cheque Handover</a></li>
-									<li><a href="#">Community</a></li>
-									<li><a href="#">Competitions</a></li>
-									<li><a href="#">Curling</a></li>
-									<li><a href="#">Donation</a></li>
-									<li><a href="#">E-Meetings</a></li>
-									<li><a href="#">Environment</a></li>
-									<li><a href="#">Events</a></li>
-									<li><a href="#">Exhibition</a></li>
-									<li><a href="#">External Visits</a></li>
-									<li><a href="#">Fundraising</a></li>
-									<li><a href="#">Golf</a></li>
-									<li><a href="#">Guest Speakers</a></li>
-									<li><a href="#">Job Talk</a></li>
-									<li><a href="#">Meetings</a></li>
-									<li><a href="#">New Member</a></li>
-									<li><a href="#">Obituary</a></li>
-									<li><a href="PaulHarrisFellowship.html">Paul Harris</a></li>
-									<li><a href="#">Presentations</a></li>
-									<li><a href="#">Projects</a></li>
-									<li><a href="#">Social events</a></li>
-									<li><a href="#">Sport</a></li>
-									<li><a href="#">Treasure Chest</a></li>
-									<li><a href="#">Uncategorized</a></li>
-									<li><a href="#">Youth Projects</a></li>
+									<li><a href="#" data-category-filter="aquabox">AquaBox</a></li>
+									<li><a href="#" data-category-filter="community">Community</a></li>
+									<li><a href="#" data-category-filter="curling">Curling</a></li>
+									<li><a href="#" data-category-filter="environment">Environment</a></li>
+									<li><a href="#" data-category-filter="events">Events</a></li>
+									<li><a href="#" data-category-filter="guest-speakers">Guest Speakers</a></li>
+									<li><a href="#" data-category-filter="new-member">New Member</a></li>
+									<li><a href="#" data-category-filter="visits">External Visits</a></li>
 								</ul>
 							</div>
 
@@ -511,6 +465,111 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		(function () {
+			const posts = Array.from(document.querySelectorAll(".news-item"));
+			const monthFilter = document.getElementById("news-month-filter");
+			const searchInput = document.getElementById("news-search");
+			const searchButton = document.getElementById("news-search-button");
+			const clearButton = document.getElementById("news-clear-filter");
+			const categoryLinks = Array.from(document.querySelectorAll("[data-category-filter]"));
+			const noResults = document.getElementById("news-no-results");
+
+			let activeCategory = "";
+
+			function normalise(text) {
+				return (text || "").toLowerCase().replace(/\s+/g, " ").trim();
+			}
+
+			function applyFilters() {
+				const selectedMonth = monthFilter ? monthFilter.value : "";
+				const searchText = normalise(searchInput ? searchInput.value : "");
+				let visibleCount = 0;
+
+				posts.forEach(function (post) {
+					const postMonth = post.getAttribute("data-month") || "";
+					const postCategory = post.getAttribute("data-category") || "";
+					const postSearch = normalise(post.textContent + " " + (post.getAttribute("data-search") || ""));
+
+					const matchesMonth = !selectedMonth || postMonth === selectedMonth;
+					const matchesCategory = !activeCategory || postCategory === activeCategory;
+					const matchesSearch = !searchText || postSearch.indexOf(searchText) !== -1;
+
+					if (matchesMonth && matchesCategory && matchesSearch) {
+						post.style.display = "";
+						visibleCount += 1;
+					} else {
+						post.style.display = "none";
+					}
+				});
+
+				if (noResults) {
+					noResults.style.display = visibleCount === 0 ? "block" : "none";
+				}
+			}
+
+			if (monthFilter) {
+				monthFilter.addEventListener("change", applyFilters);
+			}
+
+			if (searchButton) {
+				searchButton.addEventListener("click", function (event) {
+					event.preventDefault();
+					applyFilters();
+				});
+			}
+
+			if (searchInput) {
+				searchInput.addEventListener("keyup", function (event) {
+					if (event.key === "Enter") {
+						applyFilters();
+					}
+				});
+			}
+
+			categoryLinks.forEach(function (link) {
+				link.addEventListener("click", function (event) {
+					event.preventDefault();
+					const category = link.getAttribute("data-category-filter") || "";
+
+					if (activeCategory === category) {
+						activeCategory = "";
+						link.classList.remove("active-category");
+					} else {
+						activeCategory = category;
+						categoryLinks.forEach(function (otherLink) {
+							otherLink.classList.remove("active-category");
+						});
+						link.classList.add("active-category");
+					}
+
+					applyFilters();
+				});
+			});
+
+			if (clearButton) {
+				clearButton.addEventListener("click", function (event) {
+					event.preventDefault();
+
+					if (monthFilter) {
+						monthFilter.value = "";
+					}
+
+					if (searchInput) {
+						searchInput.value = "";
+					}
+
+					activeCategory = "";
+					categoryLinks.forEach(function (link) {
+						link.classList.remove("active-category");
+					});
+
+					applyFilters();
+				});
+			}
+		})();
+	</script>
 
 </body>
 

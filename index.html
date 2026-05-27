@@ -109,6 +109,49 @@
 			text-align: center;
 		}
 
+		.meetings-spot {
+			background: #cfcfcf;
+		}
+
+		.meetings-spot h3 {
+			color: #3f4c8a;
+			font-size: 1.55em;
+			line-height: 1.15;
+			margin-bottom: 0.9em;
+		}
+
+		.meetings-spot h4 {
+			color: #3f4c8a;
+			font-size: 1.35em;
+			line-height: 1.15;
+			margin: 0 0 0.75em 0;
+			font-weight: bold;
+		}
+
+		.meetings-spot p {
+			color: #3f4c8a;
+			font-size: 0.95em;
+			line-height: 1.45;
+			margin-bottom: 1.2em;
+		}
+
+		.meetings-spot strong {
+			color: #3f4c8a;
+			font-weight: bold;
+		}
+
+		.spot-red-link {
+			color: #ff0000 !important;
+			font-weight: bold;
+			font-size: 1.05em;
+			border-bottom-color: #ff0000 !important;
+		}
+
+		.latest-news-loading {
+			font-style: italic;
+			color: #666666;
+		}
+
 		.site-footer {
 			background: #6388df;
 			color: #ffffff;
@@ -431,16 +474,12 @@
 
 				<div class="home-spot">
 					<h3>Latest News</h3>
-					<ul>
-						<li><a href="news.html">Annual Careers Fair for primary schools in Ayr Town Hall</a></li>
-						<li><a href="news.html">The Carrick Resilience Team</a></li>
-						<li><a href="news.html">Ken Nairn on Richard Oswald of Auchincruive</a></li>
-						<li><a href="news.html">Ayr Rotary Charity Golf Day</a></li>
-						<li><a href="news.html">Professor Sathish Srinivasan</a></li>
-						<li><a href="news.html">Lies, lies and maybe truth</a></li>
-						<li><a href="news.html">Ayr Rotary's Annual Beach Clean</a></li>
-						<li><a href="news.html">Skip David Hope's review of the Rotary Worlds Curling</a></li>
-					</ul>
+					<div id="latest-news">
+						<p class="latest-news-loading">Loading latest news...</p>
+					</div>
+					<p>
+						<a href="news.html" class="spot-red-link">See all News</a>
+					</p>
 				</div>
 
 				<div class="home-spot">
@@ -460,46 +499,6 @@
 						<li><strong>Ayrshire Alps Cycling Sportive</strong> - Saturday 6 June 2026</li>
 					</ul>
 				</div>
-
-				.meetings-spot {
-				background: #cfcfcf;
-				}
-
-				.meetings-spot h3 {
-				color: #3f4c8a;
-				font-size: 1.55em;
-				line-height: 1.15;
-				margin-bottom: 0.9em;
-				}
-
-				.meetings-spot h4 {
-				color: #3f4c8a;
-				font-size: 1.35em;
-				line-height: 1.15;
-				margin: 0 0 0.75em 0;
-				font-weight: bold;
-				}
-
-				.meetings-spot p {
-				color: #3f4c8a;
-				font-size: 0.95em;
-				line-height: 1.45;
-				margin-bottom: 1.2em;
-				}
-
-				.meetings-spot strong {
-				color: #3f4c8a;
-				font-weight: bold;
-				}
-
-				.spot-red-link {
-				color: #ff0000 !important;
-				font-weight: bold;
-				font-size: 1.05em;
-				border-bottom-color: #ff0000 !important;
-				}
-
-
 
 				<div class="home-spot">
 					<h3>Get Involved</h3>
@@ -598,6 +597,106 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		(function () {
+			const latestNewsBox = document.getElementById("latest-news");
+			const maxItems = 8;
+
+			if (!latestNewsBox) {
+				return;
+			}
+
+			fetch("news.html")
+				.then(function (response) {
+					if (!response.ok) {
+						throw new Error("Could not load news.html");
+					}
+					return response.text();
+				})
+				.then(function (htmlText) {
+					const parser = new DOMParser();
+					const newsDocument = parser.parseFromString(htmlText, "text/html");
+
+					/*
+						Preferred future format on news.html:
+						<article class="news-item">
+							<h3><a href="news-example.html">News title</a></h3>
+							<p>Short intro...</p>
+						</article>
+
+						This script first looks for .news-item entries.
+						If none are found, it falls back to ordinary links inside news.html.
+					*/
+
+					let links = Array.from(newsDocument.querySelectorAll(".news-item h3 a, .news-item h2 a, .news-item a"));
+
+					if (links.length === 0) {
+						links = Array.from(newsDocument.querySelectorAll("a[href]"))
+							.filter(function (link) {
+								const href = link.getAttribute("href") || "";
+								const text = (link.textContent || "").trim();
+
+								return text.length > 3 &&
+									!href.startsWith("#") &&
+									!href.startsWith("mailto:") &&
+									!href.startsWith("tel:") &&
+									!href.includes("facebook") &&
+									!href.includes("assets/") &&
+									!href.includes("images/") &&
+									text.toLowerCase() !== "home" &&
+									text.toLowerCase() !== "about us" &&
+									text.toLowerCase() !== "projects" &&
+									text.toLowerCase() !== "get involved" &&
+									text.toLowerCase() !== "meetings" &&
+									text.toLowerCase() !== "news" &&
+									text.toLowerCase() !== "contact" &&
+									text.toLowerCase() !== "members";
+							});
+					}
+
+					const seen = new Set();
+					const newsLinks = links
+						.map(function (link) {
+							return {
+								text: (link.textContent || "").replace(/\s+/g, " ").trim(),
+								href: link.getAttribute("href") || "news.html"
+							};
+						})
+						.filter(function (item) {
+							const key = item.text + "|" + item.href;
+							if (!item.text || seen.has(key)) {
+								return false;
+							}
+							seen.add(key);
+							return true;
+						})
+						.slice(0, maxItems);
+
+					if (newsLinks.length === 0) {
+						latestNewsBox.innerHTML = "<p>No news items found. <a href=\"news.html\">Go to News</a>.</p>";
+						return;
+					}
+
+					const list = document.createElement("ul");
+
+					newsLinks.forEach(function (item) {
+						const li = document.createElement("li");
+						const a = document.createElement("a");
+						a.href = item.href;
+						a.textContent = item.text;
+						li.appendChild(a);
+						list.appendChild(li);
+					});
+
+					latestNewsBox.innerHTML = "";
+					latestNewsBox.appendChild(list);
+				})
+				.catch(function () {
+					latestNewsBox.innerHTML = "<p>Latest news could not be loaded. <a href=\"news.html\">Go to News</a>.</p>";
+				});
+		})();
+	</script>
 
 </body>
 
